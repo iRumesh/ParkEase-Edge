@@ -1,0 +1,11 @@
+pyenv
+log
+terminal_logs
+# requirements.sh
+**/*.pyc
+**/*__pycache__
+# modules.py
+# call_sonar.py
+capture/1.jpg
+capture/exit/1.jpg
+capture/entrance/1.jpg

@@ -1,0 +1,179 @@
+
+# declaring the pin planner data for the edge system
+
+# important note: Dont remove any variable definition. to use corresponding values you just need to change the parameter values only
+
+# SONAR:
+
+# Serial port for SOANR
+SERIAL_PORT: '/dev/ttyTHS1'
+
+# Sonar Baud Rate for serial communication
+BAUD_RATE: 9600
+
+# declaring the threshold dstance value for the sonar sensor
+THRESHOLD_DIST: '100'
+
+# GATE:
+# the ssr that used to open the gate
+GATE_OPEN_OUT: 13
+
+# the ssr that used to close the gate
+GATE_CLOSE_OUT: 15
+
+# the ssr that used to stop the opening or closing process of the gate
+GATE_STOP_OUT: 37
+
+# the mode change input for identify the manual or auto mode for the gate
+GATE_MODE_IN: 11
+
+# the ssr signal for chnage the gate controlling to manual or auto
+GATE_MODE_OUT: 22
+
+# Pin number for the buzzer
+BUZZER_PIN: 33
+
+# pin number for the buzzer interrupt btn
+BUTTON_PIN: 23
+
+# defines the led that used to indicate the current mode of the system
+MODE_LED: 38
+
+# declaring the gate closing time
+GATE_CLOSE_TIME: 2.5
+SWITCH_DELAY: 2
+
+# declaring the wating time before closing the gate
+WAIT_TIME: 20
+
+# declaring typical time that required for a vehicle to enter within the gate
+ENTERING_TIME: 3
+
+# CAMERA:
+
+# Make this 0 to use the test image files for testing. 1 to use rtsp feed.
+CAM_ENABLE: 1
+
+# 'http://192.168.1.12:8080/video' # declaring camera url for the entrance
+# CAM_URL_ENTRANCE: 'rtsp://admin:L22D04E7@192.168.1.6/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46TDIyRDA0RTc='
+
+CAM_URL_ENTRANCE: 'http://192.168.1.22:8080/video'
+
+# 'http://192.168.1.32:8080/video' # declaring camera url for the exit
+# CAM_URL_EXIT: 'rtsp://admin:parknpay123@192.168.1.4/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46TDIyRDA0RTc='
+
+CAM_URL_EXIT: 'http://192.168.1.22:8080/video'
+
+#END POINT URL'S
+ENDPOINT_URL: 'https://165.227.144.188:5000/parknpay'
+ENDPOINT_ENTRANCE_URL: 'https://152.42.208.186:8008/enter'
+ENDPOINT_EXIT_URL: 'https://152.42.208.186:8008/exit'
+ENDPOINT_URL_1: 'https://152.42.208.186:8008/anpr'
+
+# UDP_DATA:
+# declaring the ip address that asigned for camera in
+UDP_IP_IN: '192.168.1.16'
+
+# declaring the ip address that asigned for camera out
+UDP_IP_OUT: '192.168.1.17'
+
+# declaring the port number that used in the esp32 chip
+UDP_PORT: 8888
+
+# to set the loggig process we need to make this variable 1. othervise 0
+LOG_ENABLE: 1
+
+# to set the printing process we need to make this variable 1. othervise 0
+PRINT_ENABLE: 1
+
+# to ste set realtime saving process we need to make this variable 1. othervise 0
+REAL_TIME_SAVING: 0
+
+# to ste set realtime saving process we need to make this variable 1. othervise 0
+ENABLE_ULTRASONIC: 0
+
+# to disble the loggig process we need to make this variable 0. othervise 1
+GPIO_WARNING: 0
+
+# API KEYS
+API_KEY_SLT: '71f81145-f6ef-410e-a766-ab802cc5f5c7'
+API_USER_SLT: 'slt'
+API_DD_SLT: '00-FF-C5-B8-7C-89'
+
+# STATUS:
+ # for AUTO: '1' and for MANUAL: '0'
+STATE: 1
+
+# for AUTO: '1' and for MANUAL: '0'
+PREVIOUS_STATE: 1
+
+# GATE
+# for IN: '1' and for OUT: '0'
+GATE_TYPE: 1
+
+# SERVER REQUEST
+# the awaiting time for the server request [defined here in seconds]
+REQUEST_TIME_OUT: 60
+
+# WIFI ALLERT ENABLE
+# for ENABLE: '1' and for DISABLE: '0'
+WIFI_ALLERT_ENABLE: 1
+
+# WIFI_AUTO_CONNET_ENABLE
+# for ENABLE: '1' and for DISABLE: '0'
+WIFI_AUTO_CONNET_ENABLE: 1
+
+# WIFI NETWORKS
+# declare the corresponding wifi networks that the edge system can connect
+NETWORK_A:
+  SSID: 'SLT_FIBRE'
+  PASSWORD: 'SLT_FIBRE'
+
+NETWORK_B:
+  SSID: ''
+  PASSWORD: ''
+
+NETWORK_C:
+  SSID: ''
+  PASSWORD: ''
+
+NETWORK_D:
+  SSID: ''
+  PASSWORD: ''
+
+NETWORK_E:
+  SSID: ''
+  PASSWORD: ''
+
+# VEHICLE DETECTION
+# for ENABLE: '1' and for DISABLE: '0'
+VEHICLE_DETECTION: 1
+
+# Bounds of car for in camera,  This parametars are defined for a 640x640 boundary, [Center point left margin, Center point right margin, Center Point Top margin, Center Point Bottom margin, Least Width, Least Height]
+IN_CAM_BOUNDS: [240, 400, 0, 360, 130, 120]
+OUT_CAM_BOUNDS: [150, 490, 0, 360, 130, 120]
+VEHICLE_CATEGORIES: ['car', 'truck', 'motorcycle']
+ORIGINAL_API_DD_SLT: '00-FF-C5-B8-7C-89'
+ORIGINAL_API_KEY_SLT: 'E5lkbiE7AAH95kTGG76PpLHfYSfWr9hV8tXWVshLRIepxg6Cf6g9HQbCOCkju7Xa'
+ORIGINAL_API_USER_SLT: 'slt'
+ORIGINAL_CAM_URL_ENTRANCE: 'rtsp://admin:L22D04E7@192.168.1.6/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46TDIyRDA0RTc='
+ORIGINAL_CAM_URL_EXIT: 'rtsp://admin:parknpay123@192.168.1.4/cam/realmonitor?channel=1&subtype=00&authbasic=YWRtaW46TDIyRDA0RTc='
+
+# Password for the configuration page
+CONFIG_PASSWORD: '1'
+SPOT_PASSWORD: '2'
+
+# Spot camera IP address
+SPOT_CAMERA_IP: 'http://192.168.1.107:8080/video'
+
+# Spot allocation names and coordinates
+SPOT_A:
+- - - 97
+    - 316
+  - - 193
+    - 340
+  - - 243
+    - 324
+  - - 346
+    - 353
+
