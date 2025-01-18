@@ -74,7 +74,6 @@ ParkEase-Edge/
     ├── __init__.py
     └── ... 
 ```
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Capture directory
 
@@ -104,7 +103,6 @@ ParkEase-Edge/
     
     This directory is used to store images that are utilized for testing the system. These images are kept temporarily in this directory until testing purposes are finalized.
     
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Executable directory
 
@@ -131,7 +129,6 @@ ParkEase-Edge/
    
     The `main_callable` function acts as the program's core. It checks if the system is in "auto mode." If so, it verifies the Wi-Fi connection (optional) and cleans temporary image files. It then captures vehicle images at both the entry and exit points (currently commented out). Finally, it sends these captured images along with gate information (entrance or exit) to a server, likely for further processing (also commented out).  
    
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Packages directory
 
@@ -376,7 +373,6 @@ executables/
 
   
     This Python script monitors internet connectivity using a ping check to the IP address 8.8.8.8. It uses GPIO pins on a Jetson Nano to control a buzzer for alerting when no internet connection is detected. The script runs continuously in a separate thread, checking the internet status and triggering the buzzer as needed. It attempts to reconnect to pre-defined Wi-Fi networks from the configuration if the internet is not connected. It logs events using a custom logging module (pylogger) and prints messages using another custom module (pyprint). The script also imports modules for interacting with the buzzer and GPIO. The state of the buzzer is controlled by a CONTROLL_SIGNAL variable, which is set to 1 for active state and 0 for inactive state.
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- PROJECT CONFIGURATION -->
@@ -512,8 +508,6 @@ This liine show you how to configure the wifi network details, that you need to 
       SSID: The network's name.
       PASSWORD: The password for the network.
   ```
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -544,8 +538,6 @@ This line shows you how to install the virtualenv package using pip library mana
   python3 -m pip install virtualenv
   ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ### Installation & Execution
 
 1. Cloning the repo from the github
@@ -571,6 +563,5 @@ This line shows you how to install the virtualenv package using pip library mana
    sudo python3 GUI.py
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
