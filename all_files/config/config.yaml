@@ -72,10 +72,10 @@ ENDPOINT_URL_1: 'https://152.42.208.186:8008/anpr'
 
 # UDP_DATA:
 # declaring the ip address that asigned for camera in
-UDP_IP_IN: '192.168.1.16'
+UDP_IP_IN: '192.168.1.21'
 
 # declaring the ip address that asigned for camera out
-UDP_IP_OUT: '192.168.1.17'
+UDP_IP_OUT: '192.168.1.22'
 
 # declaring the port number that used in the esp32 chip
 UDP_PORT: 8888
